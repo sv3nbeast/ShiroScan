@@ -3,7 +3,7 @@ Shiro&lt;=1.2.4反序列化，一键检测工具
 
 * 如果有帮助，请点个star哦，blog：svenbeast.com
 * pip3 install -r requirments.txt     
-* Usage：python check_shiro.py //批量检测是否使用了shiro组件
+
 * Usage：python3 shiro.py  url  command
 * Usage：python3 shiro.py  http://url.com  whoami
 
