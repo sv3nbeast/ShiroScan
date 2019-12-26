@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# svenbeast.com
+# 
 import sys
 
 from moule.main import scripts
@@ -11,7 +11,7 @@ banner='''
  ___) | | | | | | | (_) |__) | (_| (_| | | | |
 |____/|_| |_|_|_|  \___/____/ \___\__,_|_| |_|
 
-                           By 斯文beast
+                           By 
 '''
 
 
