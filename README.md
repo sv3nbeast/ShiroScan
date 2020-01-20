@@ -2,7 +2,7 @@
 Shiro&lt;=1.2.4反序列化，一键检测工具
 
 ```
-集成18个key进行fuzz
+集成21个key进行fuzz
 ```
 
 * 如果有帮助，请点个star哦，blog：www.svenbeast.com
