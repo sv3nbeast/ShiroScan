@@ -9,6 +9,8 @@ import requests
 import sys
 from Crypto.Cipher import AES
 from ..main import Idea
+from requests.packages.urllib3.exceptions import InsecureRequestWarning
+requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 JAR_FILE = 'moule/ysoserial.jar'
 
