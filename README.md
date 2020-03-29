@@ -1,7 +1,7 @@
 # ShiroScan
 Shiro&lt;=1.2.4反序列化，一键检测工具
 
-    改动内容：1.新增4个利用链模块(CommonsCollections7-10)，已打包成ysoserial的jar包，请勿更换
+    改动内容：1.新增4个利用链模块(CommonsCollections7-10)，预计增加成功率30%，已打包成新ysoserial的jar包，请勿更换
     改动内容：2.增加多线程，虽模块增加但速度却提高300%
 
 ```
