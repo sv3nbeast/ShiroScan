@@ -4,4 +4,6 @@ uuid
 subprocess
 requests
 sys
+re
+threadpool
 Crypto.Cipher

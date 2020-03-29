@@ -17,8 +17,9 @@ class Idea(object):
             for plugin_name in self.PLUGINS.keys():
                 try:
                     print("[*]  开始检测模块",plugin_name)
-                    self.PLUGINS[plugin_name]().process(url,command)
-                except:
+                    self.PLUGINS[plugin_name]().process(url,command,20)
+                except Exception as e:
+                    print(e)
                     print ("[-]{} 检测失败，请检查网络连接或目标是否存活".format(plugin_name))
         else:
             for plugin_name in plugins:
