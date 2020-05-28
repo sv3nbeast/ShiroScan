@@ -12,7 +12,7 @@ Shiro&lt;=1.2.4反序列化，一键检测工具
 * pip3 install -r requirments.txt     
 
 * Usage：python3 shiro.py  url  command
-* Usage：python3 shiro.py  http://url.com  whoami
+* Usage：python3 shiro.py  https://url.com  whoami
 
 * http://www.dnslog.cn/   验证推荐使用这个dnslog平台，速度比ceye.io要快很多
 * 执行的命令带空格记得用""引起来
