@@ -10,7 +10,7 @@ Shiro&lt;=1.2.4反序列化，一键检测工具
 共集成51个key进行fuzz
 ```
 ![](./run.png)
-* 如果有帮助，请点个star哦，对应blog文章：http://www.svenbeast.com/post/tskRKJIPg/
+* 如果有帮助，请点个star哦， 上一个版本对应blog文章：http://www.svenbeast.com/post/tskRKJIPg/
 * pip3 install -r requirments.txt   
 * 若import模块错误，安装不成功，请到linux系统安装运行，或者去python库将crypto首字母改为大写并尝试pip install pycryptodome")
 * 如果存在异常java信息，请使用jdk1.8环境运行，避免使用高版本java运行
