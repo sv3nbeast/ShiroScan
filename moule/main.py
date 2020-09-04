@@ -68,7 +68,7 @@ class Idea(object):
             'Cookie' : 'rememberMe=0'
             }
         try:
-            res = requests.post(url,headers=header,verify=False,timeout=30)
+            res = requests.post(url,allow_redirects=False,headers=header,verify=False,timeout=30)
 
             if 'rememberMe' in str(res.headers):
                 return True        
@@ -89,7 +89,7 @@ class Idea(object):
                     'User-agent' : 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0;',
                     'Cookie' : 'rememberMe={}'.format(keyCookie)
                     }
-                res = requests.post(url,headers=header,verify=False,timeout=30)
+                res = requests.post(url,headers=header,allow_redirects=False,verify=False,timeout=30)
                 if 'rememberMe' not in str(res.headers):
                     return key
                 else:
