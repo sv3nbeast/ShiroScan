@@ -2,16 +2,30 @@
 Shiro&lt;=1.2.4反序列化，一键检测工具
 
     改动内容：1.新增17个利用链模块,共28个利用链，预计增加成功率30%，已打包成新ysoserial的jar包，请勿更换
+<<<<<<< HEAD
     改动内容：2.可直接获得目标使用key值
     改动内容：3.新增30个key(再多意义也不大)
+=======
+    改动内容：2.可直接获得目标使用key值
+    改动内容：3.新增30个key(再多意义也不大)
+    改动内容：4.输入命令自动进行bash编码，防止未了解此漏洞的人踩坑
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 
 ```
 共集成51个key进行fuzz
 ```
+<<<<<<< HEAD
 
 * 如果有帮助，请点个star哦，对应blog文章：http://www.svenbeast.com/post/tskRKJIPg/
 * pip3 install -r requirments.txt   
 * 若import模块错误，安装不成功，请到linux系统安装运行，或者去python库将crypto首字母改为大写并尝试pip install pycryptodome")
+=======
+![](./run.png)
+* 如果有帮助，请点个star哦， 上一个版本对应blog文章：http://www.svenbeast.com/post/tskRKJIPg/
+* pip3 install -r requirments.txt   
+* 若import模块错误，安装不成功，请到linux系统安装运行，或者去python库将crypto首字母改为大写并尝试pip install pycryptodome")
+* 如果存在异常java信息，请使用jdk1.8环境运行，避免使用高版本java运行
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 
 * Usage：python3 shiro.py  url  command
 * Usage：python3 shiro.py  http://url.com  whoami

