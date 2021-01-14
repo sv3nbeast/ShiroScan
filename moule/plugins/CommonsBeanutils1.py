@@ -43,7 +43,6 @@ class CommonsBeanutils1(object):
 
         return payload
 
-    def sendPayload(self,url,command,resKey,fp=JAR_FILE):
 
     def sendPayload(self,url,command,resKey,fp=JAR_FILE):
         key = resKey
