@@ -16,7 +16,7 @@ banner='''
 
 
 print(banner)
-print('Welcome To Shiro反序列化 RCE ! ')
+print('Welcome To Shiro反序列化 RCE ! \n')
 
 if __name__ == '__main__':
     if len(sys.argv)<2:
